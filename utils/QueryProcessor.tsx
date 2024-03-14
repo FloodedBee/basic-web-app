@@ -9,7 +9,7 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("what is")) {
     const arr: string[] = query.split(" ");
-    if (arr[3] === "multiplied") {
+    if (arr[3].localeCompare("multiplied") == 0) {
       const intVal1: number = parseInt(arr[2]);
       const intVal2: number = parseInt(arr[5]);
       return (intVal1*intVal2).toString();
