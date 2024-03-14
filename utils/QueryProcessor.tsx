@@ -7,5 +7,11 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("what is")) {
+    const arr: string[] = query.split(" ")
+    const intVal1: number = parseInt(arr[2])
+    const intVal2: number = parseInt(arr[4])
+    return (intVal1+intVal2).toString()
+  }
   return "";
 }
